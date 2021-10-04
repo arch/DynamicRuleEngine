@@ -67,7 +67,7 @@ determine the actual physical grouping of events - all events with the same valu
   - `field` specified which field will be aggregated.
   - `name` named this aggregation, it is a variable name maybe used in `limit` DSL expression. 
      > It'll be the field name if not be explicit specified.
-  - `func` aggregation function values of `SUM`, `AVG`, `MIN`, `MAX`, and maybe others in the future.
+  - `func` aggregation function values of `SUM`, `AVG`, `MIN`, `MAX`, `GROUP`, and maybe others in the future.
     The aggregated result will be used for evaluating the `limit` DSL expression.
   
 - `limit` DSL expression for evaluating aggregations and low-latency alerting.
