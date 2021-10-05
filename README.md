@@ -72,7 +72,7 @@ determine the actual physical grouping of events - all events with the same valu
   
 - `limit` DSL expression for evaluating aggregations and low-latency alerting.
 - `filter` DSL expression for filtering of certain events.
-- `prune` configure events pruning enabled or not, and fields should be reserved when pruning enabled, pruning default is enabled.
+- `prune` configure events pruning enabled or not, and fields should be reserved when pruning enabled, pruning is default enabled.
 - `windowSize` in millisecond for controlling alerting latency.
 - `command` has values of `BROADCAST_RULE`, `CLEAR_STATE_ALL`, `CLEAR_STATE_ALL_STOP`, `DELETE_RULES_ALL`, and `EXPORT_RULES_CURRENT`, default value `BROADCAST_RULE`.
 
@@ -228,8 +228,7 @@ Special Operands for String value field, assumes some field's value are string:
     ```
   - dsl supports **match** the `unknown key name` in case like
     > The total number of payer details whoever accessed is greater than `100`, or the access COUNT of 
-    > one same payer details is greater than `10` within a 4 hours period at nighttime 00:00:00 ~ 06:00:00
-    > is greater than 200$ - trigger an alert.”
+    > one same payer details is greater than `10` - trigger an alert.”
     
     ```scala
     ("a.b.c" value have any matches ( ? > 10)) || ("a.b.c" have size >= 100)
