@@ -139,7 +139,7 @@ DSL supported operators and operands are:
 - field exist determine operand `exist("field")`  
 - time interpret operands `time()`, `date()`, `datetime()`. e.g. `time("timestamp")`, `date("timestamp")`, `datetime("timestamp")`
   > the value of the field must be any one of following:
-  > 1. Long timestamp value of Unix epoch
+  > 1. Long timestamp value from Unix epoch
   > 2. String time value with format `HH:mm:ss` or `HH:mm:ss.SSS`
   > 3. String date value with format `yyyy-MM-dd`
   > 4. String datetime value with format `yyyy-MM-dd HH:mm:ss` or `yyyy-MM-dd'T'HH:mm:ss.SSS+0800`
