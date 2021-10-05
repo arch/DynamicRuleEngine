@@ -139,7 +139,7 @@ DSL supported operators and operands are:
 - field exist determine operand `exist("field")`  
 - time interpret operands `time()`, `date()`, `datetime()`. e.g. `time("timestamp")`, `date("timestamp")`, `datetime("timestamp")`
   > the value of the field must be any one of following:
-  > 1. Long timestamp value from Unix epoch
+  > 1. Long timestamp value since from Unix epoch
   > 2. String time value with format `HH:mm:ss` or `HH:mm:ss.SSS`
   > 3. String date value with format `yyyy-MM-dd`
   > 4. String datetime value with format `yyyy-MM-dd HH:mm:ss` or `yyyy-MM-dd'T'HH:mm:ss.SSS+0800`
@@ -227,8 +227,8 @@ Special Operands for String value field, assumes some field's value are string:
     "a.b.key3" any matches ("key" ==# "3") && ("key" =#= "^k\\d$")
     ```
   - dsl supports **match** the `unknown key name` in case like
-    > The total number of payer details whoever accessed is greater than `100`, or the access COUNT of 
-    > one same payer details is greater than `10` - trigger an alert.”
+    > The total number of payer details whoever accessed is greater than `100`, or the total COUNT of 
+    > accessed the same one payer details is greater than `10` - trigger an alert.
     
     ```scala
     ("a.b.c" value have any matches ( ? > 10)) || ("a.b.c" have size >= 100)
